@@ -11,7 +11,7 @@ import org.springframework.web.method.support.ModelAndViewContainer
 
 class LoginMemberArgumentResolver : HandlerMethodArgumentResolver {
     override fun supportsParameter(parameter: MethodParameter): Boolean {
-        val hasLoginAnnotation = parameter.hasParameterAnnotation(LoginUser::class.java)
+        val hasLoginAnnotation = parameter.hasParameterAnnotation(LoginMember::class.java)
         val hasMemberType = Member::class.java.isAssignableFrom(parameter.parameterType)
         return hasLoginAnnotation && hasMemberType
     }

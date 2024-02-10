@@ -1,7 +1,7 @@
 package jahni.sandbox.application.domain.Member
 
 import jahni.sandbox.application.exception.JahniCustomException
-import jahni.sandbox.infra.database.member.MemberJpaRepository
+import jahni.sandbox.infra.database.MemberJpaRepository
 import org.springframework.stereotype.Service
 
 @Service
@@ -22,7 +22,7 @@ class LoginService(
     }
 
     private fun checkPassword(member: Member, command: LoginCommand) {
-        if (member.getPassword() != command.password)
+        if (member.password != command.password)
             throw JahniCustomException("비밀번호가 일치하지 않습니다.")
     }
 }

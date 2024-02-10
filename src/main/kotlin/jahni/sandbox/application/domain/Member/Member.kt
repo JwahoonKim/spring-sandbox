@@ -1,26 +1,13 @@
 package jahni.sandbox.application.domain.Member
 
+import jahni.sandbox.application.domain.BaseTimeEntity
 import jakarta.persistence.*
 
 @Entity
 @Table(name = "member")
 class Member(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private val id: Long = 0L,
-    private val loginId: String,
-    private var password: String,
-) {
-
-    fun getId(): Long {
-        return this.id
-    }
-
-    fun getLoginId(): String {
-        return this.loginId
-    }
-
-    fun getPassword(): String {
-        return this.password
-    }
-
-}
+    val id: Long = 0L,
+    val loginId: String,
+    var password: String,
+) : BaseTimeEntity()

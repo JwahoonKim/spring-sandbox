@@ -3,7 +3,7 @@ package jahni.sandbox.api.controller.member.request
 import jahni.sandbox.application.domain.Member.LoginCommand
 import jakarta.servlet.http.HttpServletRequest
 
-class LoginMemberRequest(
+data class LoginMemberRequest(
     val loginId: String,
     val password: String,
 ) {

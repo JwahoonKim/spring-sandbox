@@ -4,12 +4,10 @@ import io.micrometer.core.instrument.Counter
 import io.micrometer.core.instrument.MeterRegistry
 import java.util.concurrent.atomic.AtomicInteger
 import org.slf4j.LoggerFactory
-import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Service
 
 private val log = LoggerFactory.getLogger(OrderServiceV1::class.java)
 
-@Primary
 @Service
 class OrderServiceV1(
     private val meterRegistry: MeterRegistry,

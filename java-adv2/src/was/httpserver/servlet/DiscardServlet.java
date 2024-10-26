@@ -1,0 +1,13 @@
+package was.httpserver.servlet;
+
+import was.httpserver.HttpRequest;
+import was.httpserver.HttpResponse;
+
+public class DiscardServlet implements HttpServlet {
+
+    @Override
+    public void service(HttpRequest request, HttpResponse response) {
+        // Do nothing
+    }
+
+}

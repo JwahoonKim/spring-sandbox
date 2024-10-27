@@ -19,7 +19,7 @@ public class ServletManager {
         servletMap.put(path, servlet);
     }
 
-    private void setDefaultServlet(HttpServlet defaultServlet) {
+    public void setDefaultServlet(HttpServlet defaultServlet) {
         this.defaultServlet = defaultServlet;
     }
 
